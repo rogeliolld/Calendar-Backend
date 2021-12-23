@@ -46,6 +46,14 @@ router.post(
 //Actualizar Eventos
 router.put(
     '/:id', 
+    [
+        check('title', 'El titulo es obligatorio').not().isEmpty(),
+        check('start', 'Fecha de inicio es obligatorio').custom( isDate ),
+        check('end', 'Fecha de finalizacion es obligatorio').custom( isDate ),
+
+
+        validarCampos
+      ],
     actualizarEvento
 );
 
