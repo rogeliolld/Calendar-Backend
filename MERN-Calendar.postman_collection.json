@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "06fc406d-82dd-45ae-9d35-afb30dd48544",
+		"name": "MERN-Calendar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth - Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Diego\",\r\n    \"email\": \"jdiego@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"new"
+					]
+				},
+				"description": "Auth - Crear Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rogelio@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				},
+				"description": "Auth - Crear Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Revalidar JWT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWMwZjc0NGU0ZTZiYmE1ZTVmNDcyYWIiLCJuYW1lIjoiUm9nZWxpbyIsImlhdCI6MTY0MDEyMjQ3MywiZXhwIjoxNjQwMTI5NjczfQ.1MI9B37IglFA1cPZO_1ctSqpqpm8U8LIXP112jKcj8A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rogelio@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/renew",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"renew"
+					]
+				},
+				"description": "Auth - Crear Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Event - Obtener Eventos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWMwZjc0NGU0ZTZiYmE1ZTVmNDcyYWIiLCJuYW1lIjoiUm9nZWxpbyIsImlhdCI6MTY0MDIwNzkyMCwiZXhwIjoxNjQwMjE1MTIwfQ.KUGgqmwUAMxTx4WZhKdaLko2gvWm0K2FAsoTD8s-cNQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event - Crear Eventos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWMwZjc0NGU0ZTZiYmE1ZTVmNDcyYWIiLCJuYW1lIjoiUm9nZWxpbyIsImlhdCI6MTY0MDI4MjIxMSwiZXhwIjoxNjQwMjg5NDExfQ.CwSOc1YhJiEeO6tLAXYbX-8jqBgxjzE-EvWI-ddb_oA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Cumpleaños del Jefe\",\r\n    \"start\": 1,\r\n    \"end\": 1000000,\r\n    \"notes\": \"Comprar Pastel sdsdsd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event - Actualizar Eventos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWMyNDFjOTU2ZWE2ZWUyZjkyZGM3NWYiLCJuYW1lIjoiSnVhbiBEaWVnbyIsImlhdCI6MTY0MDI5MzMxNCwiZXhwIjoxNjQwMzAwNTE0fQ.VusP646jMNezQv7NX8lTYq-WE1gA_jHtyl6PXPzMlKE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Trabajo Pendiente!!\",\r\n    \"start\": 1,\r\n    \"end\": 1000000,\r\n    \"notes\": \"Hola mundo....\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/events/61c4bc6583c7a330328ec9ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						"61c4bc6583c7a330328ec9ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event - Delete Eventos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWMwZjc0NGU0ZTZiYmE1ZTVmNDcyYWIiLCJuYW1lIjoiUm9nZWxpbyIsImlhdCI6MTY0MDIwNzkyMCwiZXhwIjoxNjQwMjE1MTIwfQ.KUGgqmwUAMxTx4WZhKdaLko2gvWm0K2FAsoTD8s-cNQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/events/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
